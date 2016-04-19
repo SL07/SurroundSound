@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp" >
+
+    <!-- Setting Title -->
+
+
+    <!-- Shuffle -->
+
+
+    <!-- Library Title -->
+
+    <ProgressBar
+        android:id="@+id/rescanProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/rescanState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <!-- Rescanning Pause Button -->
+
+        <ImageView
+            android:id="@+id/togglePause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/sync_library"
+            android:gravity="center_vertical"
+            android:paddingRight="10sp"
+            android:src="@drawable/fs_scan_pause48" />
+
+        <!-- Rescanning Track Name -->
+
+        <TextView
+            android:id="@+id/rescanProgressBarIndicatorTrack"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:ellipsize="start"
+            android:gravity="center_vertical"
+            android:paddingRight="20dp"
+            android:singleLine="true"
+            android:text="@string/trackInitialValue" />
+
+        <!-- Tracks Completed -->
+
+        <TextView
+            android:id="@+id/rescanProgressBarIndicatorState"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:text="@string/zero" />
+
+        <!-- Sepeator -->
+
+        <TextView
+            android:id="@+id/rescanProgressBarIndicatorDelitmiter"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:text="@string/trackPostionSeparator" />
+
+        <!-- Total Number of Tracks -->
+
+        <TextView
+            android:id="@+id/rescanProgressBarIndicatorAll"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:text="@string/zero" />
+    </LinearLayout>
+
+    <!-- About Information -->
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/welcome"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/musicAround"
+        android:layout_width="match_parent"
+        android:layout_height="153dp"
+        android:layout_marginBottom="82dp"
+        android:maxLines="15"
+        android:scrollbars="vertical"
+        android:text="@string/currentMusic"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ToggleButton
+        android:id="@+id/onAndOff"
+        android:layout_width="71dp"
+        android:layout_height="wrap_content"
+        android:text="@string/switchButton" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingTop="15dp"
+        android:text="@string/library"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/rescan"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:contentDescription="@string/sync_library"
+            android:gravity="center_vertical"
+            android:paddingRight="10sp"
+            android:src="@drawable/fs_scan_start48" />
+
+        <TextView
+            android:id="@+id/mediaDir"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:ellipsize="start"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="@string/default_path" />
+
+        <ImageView
+            android:id="@+id/chooseMediaDir"
+            android:layout_width="35dp"
+            android:layout_height="fill_parent"
+            android:contentDescription="@string/edit_dir"
+            android:gravity="center_vertical"
+            android:src="@android:drawable/ic_menu_edit" />
+    </LinearLayout>
+
+</LinearLayout>
